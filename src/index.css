@@ -24,6 +24,7 @@
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   row-gap: 10px;
 }
 
@@ -107,7 +108,7 @@
                     /* ========================== main ============================= */
 
 .main{
-  flex: 1;
+  
   padding:10px;
   display: flex;
   align-items: center;
