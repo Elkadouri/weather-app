@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { SearchContext } from "../App";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTemperatureHalf, faCloudSun, faDroplet, faWind } from "@fortawesome/free-solid-svg-icons";
 
 export default function Main() {
   const [click] = useContext(SearchContext);
@@ -43,10 +45,22 @@ export default function Main() {
           <div>
             <h1>{weather.name}</h1>
             <div className="text">
-              <p>Temperature: {weather.main.temp}°C</p>
-              <p>Description: {weather.weather[0].description}</p>
-              <p>Humidity: {weather.main.humidity}%</p>
-              <p>Wind Speed: {weather.wind.speed} m/s</p>
+              <div>
+               <FontAwesomeIcon width={20} icon={faTemperatureHalf} />
+                <p>Temperature: <span>{weather.main.temp}°C</span></p>
+              </div>
+              <div>
+                <FontAwesomeIcon width={20}  icon={faCloudSun} />
+                <p>Description: <span>{weather.weather[0].description}</span></p>
+              </div>
+              <div>
+                <FontAwesomeIcon width={20}  icon={faDroplet} />
+                <p>Humidity: <span>{weather.main.humidity}%</span></p>
+              </div>
+              <div>
+                <FontAwesomeIcon width={20}  icon={faWind} />
+                <p>Wind Speed: <span>{weather.wind.speed} m/s</span></p>
+              </div>
             </div>
           </div>
           <div className="img-container">

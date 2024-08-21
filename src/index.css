@@ -151,6 +151,20 @@
   color: #838892;
 }
 
+.main .info .text div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main .info .text div p span{
+  color: #b0b4bd;
+  font-size: 18px;
+  font-style: italic;
+}
+
+
+
 
 .main .info .img-container{
   width: 230px;
